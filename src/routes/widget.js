@@ -32,7 +32,7 @@ router.get('/config/:widgetId', async (req, res) => {
 
 // Get embed code snippet
 router.get('/embed-code', authenticate, (req, res) => {
-  const widgetUrl = process.env.WIDGET_SCRIPT_URL || 'http://localhost:5000/widget.js';
+  const widgetUrl = process.env.WIDGET_SCRIPT_URL || 'https://ai-chat-widget-backend.onrender.com/widget.js';
   const embedCode = `<!-- AI Chat Widget -->
 <script>
   window.AIChatConfig = { widgetId: '${req.user.widgetId}' };
